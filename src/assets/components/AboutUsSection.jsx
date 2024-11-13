@@ -22,8 +22,8 @@ const AnimatedCounter = ({ from, to, duration }) => {
 
 const AboutUsSection = () => {
   return (
-    <section className="text-center h-fit py-8 px-8 md:px-32 w-screen bg-primary011">
-      <div className="w-full flex flex-col md:flex-row  justify-between md:items-end mx-auto">
+    <section className="text-center h-fit py-8 px-8 lg:px-32 w-screen bg-primary011">
+      <div className="w-full flex flex-col lg:flex-row  justify-between lg:items-end">
         <div className="w-fit h-fit flex flex-col justify-start items-start">
           <div className="flex justify-start gap-2 items-center">
             <h3 className="text-secondary011 font-poppinsRegular tracking-wide text-sm mb-2">
@@ -41,12 +41,12 @@ const AboutUsSection = () => {
             </svg>
           </div>
 
-          <h1 className="text-6xl w-[400px] text-left mt-2 text-textPrimary011  font-stylishBold mb-4 text-wrap">
+          <h1 className="text-6xl w-[350px] md:w-[390px] text-left mt-2 text-textPrimary011  font-stylishBold mb-4 text-wrap">
             Bringing Heritage to Modern Spaces.
           </h1>
         </div>
         <p
-          className="text-textPrimary011 pt-2 font-poppinsBold text-xl mb-12 md:w-[600px] text-end md:text-start"
+          className="text-textPrimary011 pt-2 font-poppinsBold text-xl mb-12 lg:w-[600px] text-end lg:text-start"
           style={{ textIndent: "5rem" }}
         >
           At Artisan Antique, we are dedicated to sourcing you the finest
@@ -56,13 +56,13 @@ const AboutUsSection = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-start md:justify-between items-center  w-full mt-9 md:mt-36">
+      <div className="flex flex-col lg:flex-row justify-start md:justify-between items-center  w-full mt-9 lg:mt-36">
         <div className="text-center  w-[200px] ">
           <h2 className="text-[100px] text-textPrimary011 font-poppinsLight">
             <AnimatedCounter from={0} to={900} duration={2} />
             <span className="text-textSecondary011">+</span>
           </h2>
-          <p className="text-textSecondary011 text-sm md:mt-10">
+          <p className="text-textSecondary011 text-sm ">
             Products that we have created and sold on the market
           </p>
         </div>
@@ -72,7 +72,7 @@ const AboutUsSection = () => {
             <AnimatedCounter from={0} to={20000} duration={2} />
             <span className="text-textSecondary011">+</span>
           </h2>
-          <p className="text-textSecondary011 text-sm  md:mt-10">
+          <p className="text-textSecondary011 text-sm  ">
             Happy and loyal customers buy our products
           </p>
         </div>
@@ -82,7 +82,7 @@ const AboutUsSection = () => {
             <AnimatedCounter from={0} to={98} duration={2} />
             <span className="text-textSecondary011">%</span>
           </h2>
-          <p className="text-textSecondary011 text-sm  md:mt-10">
+          <p className="text-textSecondary011 text-sm  ">
             Customers who have purchased will come back again
           </p>
         </div>

@@ -5,15 +5,16 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-primary011 p-8 rounded-t-lg">
-      <div className="container mx-auto flex flex-col md:flex-row items-center  justify-center md:justify-between  md:items-start ">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center  justify-center lg:justify-between  lg:items-start ">
         {/* Left Section */}
-        <div className="mb-8 md:mb-0 w-fit flex flex-col items-center md:items-start ">
+        <div className="mb-8 lg:mb-0 w-fit flex flex-col items-center lg:items-start ">
           <h1 className="text-3xl font-stylishBold text-textPrimary011 mb-4  text-center md:text-start">
             kayujati
           </h1>
-          <p className="text-textSecondary011 mb-4 w-full md:w-3/5  text-center md:text-start">
-            We believe that good design should be easy to accept and comfortable
-            to enjoy
+          <p className="text-textSecondary011 mb-4 w-full lg:w-3/5  text-center lg:text-start">
+            We believe that the perfect living space is a mixture of
+            practicality and the nostalgic richness of the ancient art forms.
+            Artisan Antique is ready to cater that mixture!
           </p>
         </div>
         <div className="w-fit mb-8 md:mb-0 ">
