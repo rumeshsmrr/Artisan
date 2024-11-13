@@ -1,65 +1,116 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer className="bg-primary011 p-8 rounded-t-lg">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center  justify-center lg:justify-between  lg:items-start ">
+      <motion.div
+        className="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:items-start"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {/* Left Section */}
-        <div className="mb-8 lg:mb-0 w-fit flex flex-col items-center lg:items-start ">
-          <h1 className="text-3xl font-stylishBold text-textPrimary011 mb-4  text-center md:text-start">
+        <motion.div
+          className="mb-8 lg:mb-0 w-fit flex flex-col items-center lg:items-start"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="text-3xl font-stylishBold text-textPrimary011 mb-4 text-center md:text-start">
             kayujati
           </h1>
-          <p className="text-textSecondary011 mb-4 w-full lg:w-3/5  text-center lg:text-start">
+          <p className="text-textSecondary011 mb-4 w-full lg:w-3/5 text-center lg:text-start">
             We believe that the perfect living space is a mixture of
             practicality and the nostalgic richness of the ancient art forms.
             Artisan Antique is ready to cater that mixture!
           </p>
-        </div>
-        <div className="w-fit mb-8 md:mb-0 ">
-          <nav className="text-textSecondary011 tracking-wide text-lg font-stylish ">
-            <ul className="flex flex-col w-full font-stylishBold text-nowrap justify-center md:justify-end  md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-              <li className="cursor-pointer">Home</li>
-              <li className="cursor-pointer w-fit">About Us</li>
-              <li className="cursor-pointer w-fit">Services</li>
+        </motion.div>
 
-              <li className="cursor-pointer">Blog</li>
-              <li className="cursor-pointer">Contact</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div className="container mx-auto flex flex-col-reverse md:flex-row justify-between  gap-16 items-end mt-10 ">
-        <div className="w-full md:w-1/2 flex justify-between items-end ">
+        <motion.nav
+          className="w-fit mb-8 md:mb-0"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <ul className="flex flex-col w-full font-stylishBold text-nowrap justify-center md:justify-end md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+            {["Home", "About Us", "Services", "Blog", "Contact"].map(
+              (item, index) => (
+                <motion.li
+                  key={index}
+                  className="cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item}
+                </motion.li>
+              )
+            )}
+          </ul>
+        </motion.nav>
+      </motion.div>
+
+      <motion.div
+        className="container mx-auto flex flex-col-reverse md:flex-row justify-between gap-16 items-end mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="w-full md:w-1/2 flex justify-between items-end"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <div className="flex flex-row space-y-4 items-end gap-4">
             <div className="flex flex-col space-y-4">
-              <button className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center">
-                <FaFacebookF className="text-lg text-textPrimary011" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center">
-                <FaLinkedin className="text-lg text-textPrimary011" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center">
-                <FaTiktok className="text-lg text-textPrimary011" />
-              </button>
+              {[
+                { icon: <FaFacebookF />, label: "Facebook" },
+                { icon: <FaLinkedin />, label: "LinkedIn" },
+                { icon: <FaTiktok />, label: "TikTok" },
+              ].map((button, index) => (
+                <motion.button
+                  key={index}
+                  className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={button.label}
+                >
+                  {button.icon}
+                </motion.button>
+              ))}
             </div>
             <div className="flex flex-col space-y-4">
-              <button className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center">
-                <FaXTwitter className="text-lg text-textPrimary011" />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center">
-                <FaInstagram className="text-lg text-textPrimary011" />
-              </button>
+              {[
+                { icon: <FaXTwitter />, label: "Twitter" },
+                { icon: <FaInstagram />, label: "Instagram" },
+              ].map((button, index) => (
+                <motion.button
+                  key={index}
+                  className="w-10 h-10 rounded-full bg-secondary011 flex items-center justify-center"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={button.label}
+                >
+                  {button.icon}
+                </motion.button>
+              ))}
             </div>
           </div>
 
           <p className="text-sm text-textSecondary011 mt-6">
             © 2021 — Copyright <br /> All Rights reserved
           </p>
-        </div>
+        </motion.div>
 
-        <div className="w-full md:w-1/2 h-full md:space-y-8 ">
+        <motion.div
+          className="w-full md:w-1/2 h-full md:space-y-8"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <div className="w-full flex justify-start">
             <div className="mb-0">
               <h2 className="text-textPrimary011 font-stylishBold mb-4">
@@ -71,7 +122,7 @@ const Footer = () => {
           </div>
           <div className="w-full flex justify-between">
             <div className="m-0">
-              <h2 className="text-textPrimary011 font-stylishBold mb-4 ">
+              <h2 className="text-textPrimary011 font-stylishBold mb-4">
                 Location
               </h2>
               <p className="text-textSecondary011">
@@ -85,16 +136,20 @@ const Footer = () => {
                 Languages
               </h2>
               <div className="flex space-x-2 text-textSecondary011">
-                <p>En</p>
-                <p>Es</p>
-                <p>Fr</p>
-                <p>De</p>
-                <p>Ru</p>
+                {["En", "Es", "Fr", "De", "Ru"].map((lang, index) => (
+                  <motion.p
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {lang}
+                  </motion.p>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 };
