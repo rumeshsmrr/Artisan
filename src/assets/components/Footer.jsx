@@ -20,7 +20,7 @@ const Footer = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-3xl font-stylishBold text-textPrimary011 mb-4 text-center md:text-start">
-            kayujati
+            Artisan Antique
           </h1>
           <p className="text-textSecondary011 mb-4 w-full lg:w-3/5 text-center lg:text-start">
             We believe that the perfect living space is a mixture of
