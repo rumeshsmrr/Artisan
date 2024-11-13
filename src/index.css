@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+@font-face {
+  font-family: "stylish";
+  src: url("./assets/fonts/Olivera.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "stylishBold";
+  src: url("./assets/fonts/Olivera.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsRegular";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsBold";
+  src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsLight";
+  src: url("./assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
